@@ -41,6 +41,26 @@ func setCd(sku string, title string) {
 	setCache(CacheKeyCd+sku, title)
 }
 
+func countBooks() int {
+	count := 0
+	for key := range cache {
+		if len(key) >= len(CacheKeyBook) && key[:len(CacheKeyBook)] == CacheKeyBook {
+			count++
+		}
+	}
+	return count
+}
+
+func countCDs() int {
+	count := 0
+	for key := range cache {
+		if len(key) >= len(CacheKeyCd) && key[:len(CacheKeyCd)] == CacheKeyCd {
+			count++
+		}
+	}
+	return count
+}
+
 func main() {
 
 	cache = make(map[string]string)
@@ -53,5 +73,6 @@ func main() {
 
 	fmt.Println("CD: ", getCd("1234-5678"))
 
-	fmt.Println(cache)
+	fmt.Println("Books in cache:", countBooks())
+	fmt.Println("CDs in cache:", countCDs())
 }
