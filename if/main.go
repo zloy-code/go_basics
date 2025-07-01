@@ -38,6 +38,8 @@ func main() {
 	// 	fmt.Println("The Number is Odd")
 	// }
 
+	// Initial if statement
+
 	if err := validate(number); err != nil {
 
 		fmt.Println(err)
