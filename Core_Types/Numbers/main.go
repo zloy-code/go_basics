@@ -48,4 +48,6 @@ func main() {
 
 // Natija :
 // int turi uchun = TotalAlloc (Heap) = 469 MiB
-// int8 turi uchun =
+// int8 turi uchun = TotalAlloc (Heap) = 49 MiB
+
+// ko'rib turganingizdek xotiradan foydalanish sezilarli darajada kamaygan
